@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <script>
+        // cookies attributes
+    /*expires: it maintains the state of cookie upto certian time
+    max-age: it maintains cookie upto specific time
+    path: it expands the scope of cookies to other pages
+    domain: it is used to specify the domian to which cookies to be used.
+    */
+
+    //expires
+    function setcookie()
+    {
+        // Day, DD Month YYYY HH:MM:SS GMT
+        document.cookie="username=prerak gupta;expires=Tue, 20 Jun 2023 20:04:00 IST ";
+    }
+    function getcookie()  
+    {  
+        if(document.cookie.length!=0)  
+        {  
+            var array=document.cookie.split("=");  
+        alert("Name="+array[0]+" "+"Value="+array[1]);  
+        }  
+        else  
+        {  
+        alert("Cookie not available");  
+        }  
+    } 
+    //more can be explored
+    </script>
+
+<input type="button" value="setCookie" onclick="setcookie()">  
+<input type="button" value="getCookie" onclick="getcookie()"> 
+</body>
+</html>

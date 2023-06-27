@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model</title>
+</head>
+<body>
+    <script>
+        /* window object represents a window in browser
+        window is the object of browser not object of javascript
+        */
+
+        function msg()
+        {
+            alert("hello alert box");
+        }
+
+        //confirm
+        function msg1()
+        {
+            var v=confirm("Are you sure");
+            if(v==true)
+            {
+                alert("ok");
+            }
+            else
+            {
+                alert("cancel");
+            }
+        }
+        
+        //prompt
+        function msg2()
+        {
+            var v=prompt("who are you?");
+            alert("I am "+v);
+        }   
+        
+        //open
+        function msg3()
+        {
+            open("https://ceasyy.netlify.app");
+        }
+        
+
+        //setTimeout()
+        //it performs its task after the given miliseconds
+
+        function msg4()
+        {
+            setTimeout(
+                function()
+                {
+                    alert("welcome to ceasyy");
+                }
+            ,2000);
+        }
+
+    </script>
+    <input type="button" value="click_a" onclick="msg()">
+    <input type="button" value="delete record" onclick="msg1()">
+    <input type="button" value="get record" onclick="msg2()">
+    <input type="submit" value="open ceasyy" onclick="msg3()">
+    <input type="submit" value="click_d" onclick="msg4()">
+</body>
+</html>
+

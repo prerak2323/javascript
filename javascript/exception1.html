@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exception handellign</title>
+</head>
+<body>
+    <script>
+    // an exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions. 
+    /*For example, the Division of a non-zero value with zero will result into infinity always, and it is an exception.
+    Thus, with the help of exception handling, it can be executed and handled.
+    # When an exception is thrown, the JavaScript interpreter searches for an exception handler to deal with it. If no
+    appropriate handler is found, the program will terminate.
+    # an exception condition can be throwned using "throw" and exception is handelled using "try....catch" code snippet
+    # Error Object(constructor)
+    When an error is thrown a error object is created such object can be used as base for exception handelling
+    #properties of error objects
+    1>name: it returns the error name
+    2> message: it returns an error msg in string format
+    */
+   /*"try{}" in this all the code with possibility of errro is kept if any error occur then "catch{}" statement
+   handelles it
+   note:also one try block can contain one or more catch blocks*/
+
+        try{
+            var arr=['1','2','3','4','5','6','7','8','9'];
+            document.write(arr);
+            document.write(arrer);
+        }
+        catch(e)
+        {
+            alert("nahi arrer name ke koi error"+e.message);
+        }
+        //  throw statement
+        // throw statement is used to throw user defined error like we can design and throw our own costum error 
+        // When an exception is thrown, the JavaScript interpreter looks for the closest catch block 
+        // new Error('This is the throw keyword'): This creates a new instance of the Error object
+        
+        try{
+            throw new Error('this is the throw keyword');
+        }
+        catch(e)
+        {
+            document.write('pakada gaya throw'+" "+e.message);
+        }
+
+        //finally
+        //finally is block of statements which is executed after execution of try catch statement
+        //  if "finally" block is present it will executed no matter of output
+        
+        
+        var a=2;
+        try{
+            if(a==2)
+            {
+            document.write("verified");
+            }
+        }
+
+        catch(e)
+        {
+            alert("some error dont worry");
+        }
+        finally
+        {
+            document.write("value of a is "+a);
+        }
+
+    </script>
+</body>
+</html>

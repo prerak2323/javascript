@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Form Validation</title>
+</head>
+<body>
+    <script>
+        /*In this example, we are going to validate the name and password. 
+        The name can’t be empty and password can’t be less than 6 characters long.
+        Here, we are validating the form on form submit. The user will not be forwarded 
+        to the next page until given values are correct.*/
+
+        function validate()
+        {
+            var name=document.rform.name.value;
+            var password=document.rform.password.value;
+            var repass=document.rform.repassword.value;
+            if(name==null || name=="")
+            {
+                alert("Please enter name.");
+                // return false;
+            }
+            else if(password.length<6)
+            {
+                alert("enter a 6 char password");
+                // return false;
+            }
+            else if(password!==repass)
+            {
+                alert("password did not match");
+                // return false;
+            }
+        }
+function numvalidation()
+{
+    var num=document.nform.num.value;
+    if(isNAN(num))
+    {
+        document.getElementById("check").innerHTML="Enter Valid Number";
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+    </script>
+
+<form name="rform" method="post" action="" onsubmit="validate()">
+Name: <input type="text" name="name"><br>
+Password: <input type="password" name="password">
+Re Enter: <input type="password" name="repassword"><br>
+<input type="submit">
+</form>
+
+<form name="nform" onsubmit="numvalidation()">
+Enter Number: <input type="text" name="num">
+<input type="submit">
+<span id="check"></span><br>
+</form>
+</body>
+</html>

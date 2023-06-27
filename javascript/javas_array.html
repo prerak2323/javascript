@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // three ways to construct array 
+        /* 1> by array literal
+        2> by creating instance of Array Directly (using new keyword)
+        3> by using array construct  */
+
+        // array literal
+        var arrayname=["table lamp","bed table"];
+        for(i=0;i<arrayname.length;i++)
+        {
+            document.write("array literal"+"<br>");
+            document.write(arrayname[i]+"<br>");
+        }
+
+        // new keyword
+
+        var emp= new Array();
+
+        emp[0]="Arun";
+        emp[1]="Prerak Gupta";
+
+        for(j=0;j<emp.length;j++)
+        {
+            document.write("new key word"+"<br>");
+            document.write(emp[j]+"<br>");
+        }
+
+        // forEach() function is also available
+        // string literal
+        var stringname="prerak gupta";
+
+        alert(stringname);
+    </script>
+</body>
+</html>

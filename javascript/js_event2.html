@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+</head>
+<body onload="document.write('page loaded sucessfully')">
+    <script>
+        // onkeydown(eventhandeler) & onkeyup(eventhandeler)-When the user press and then release the key
+        function keydownevent()
+        {
+            alert("to ne key borad dabaya");
+           
+            //ye kuch daba ne ke phele hogo
+
+        }
+        function keyupevent()
+        {
+            alert("kuch daba");
+            //ye daba ne ke badd hoga
+        }
+        
+        //form events
+        //onfocus(eventhandeler)-When the user focuses on an element
+        function focusevent()
+        {
+            document.getElementById("inp1").style.background="aqua";         
+        }
+
+        // onblur(event handeler)-When the focus is away from a form element
+
+        function blur()
+        {
+            document.getElemntById('ínp1').style.background="pink";
+        }
+
+        //onchange(eventhandeler)-When the user modifies or changes the value of a form element
+        function change()
+        {
+            document.getElementById('ch').innerHTML="onchange eventhandeler";
+        }
+
+        // onload(eventhandeler) - When the browser finishes the loading of the page
+        function afterload()
+        {
+            document.getElementById('load').innerHTML="page sucessfuly loaded";
+        }
+
+    </script>
+
+    <input type="text" onkeydown="change()">
+    <input typt="text" onkeyup="keyupevent()">
+
+    //form events
+    <input type="text" onfocus="focusevent()" id="inp1">
+
+    <input type="text" onchange="change()">
+    <span id="ch"></span>
+
+
+    <!-- ------------ -->
+
+    <span id="load">::</span>
+</body>
+</html>

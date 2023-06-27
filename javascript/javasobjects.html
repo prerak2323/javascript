@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*javascript objects
+        A javaScript object is an entity having state and behavior (properties and method). For example: car, pen, bike, chair, glass, keyboard, monitor etc.
+
+JavaScript is an object-based language. Everything is an object in JavaScript.
+
+JavaScript is template based not class based. Here, we don't create class to get the object. But, we direct create objects.
+there are 3 ways to create objects.
+
+By object literal
+By creating instance of Object directly (using new keyword)
+By using an object constructor (using new keyword)*/
+    //javascript object by object literal
+
+//  "+" append 
+   emp={
+    id:102,name:"prerak gupta",salary:100000000
+   }
+   document.write(emp.id+" "+emp.name+" "+emp.salary);
+   // by creating instance
+   var emp2=new Object();
+   emp2.id=101;
+   emp2.name="prerak gupta";
+   emp2.salary=100000000;
+   document.write(emp2.id+" "+emp2.name+" "+emp2.salary);
+
+   // by using object construct
+   function emp3(id,name,salary)
+   {
+    this.id=id;   //the this keyword refers to the current object
+    this.name=name;
+    this.salary=salary;
+   }
+   e=new emp3(103,"gupta prerak",10000000);
+
+   document.write(e.id+" "+e.name+" "+e.salary);
+
+   //defining method in javascript
+   function emp4(id,name,salary)
+   {
+    this.id=id;
+    this.name=name;
+    this.salary=salary;
+// here this.changesalary is method of object emp4
+// changealary is object
+    function changesalary(othersalary)
+    {
+        this.salary=othersalary;
+    }
+    this.changesalary=changesalary;
+
+   }
+e=new emp4(103,"gupta prerak",10000000);
+e.changesalary(90000000);
+document.write(e.salary);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date objects</title>
+</head>
+<body>
+    <script>
+        /*Constructor
+        1> Date()
+        2>Date(milliseconds)
+        3>Date(dateString)
+        4>Date(year,month,day,hours,minutes,seconds,milliseconds)
+        */
+
+        /* methods
+        1> getDate() -> returns day
+        2> getDay()  -> returns weeek
+        3> getHour() -> returns hours
+        4> setDate() -> sets day value
+        5> setHours() -> sets hour value
+        6> setMinutes() -> sets minutes value
+        7> setSeconds() -> sets seconds value
+        */
+       
+        var date= new Date();
+        var day= date.getDate();
+        var month=date.getMonth();
+        var year=date.getFullYear();
+
+        document.write(day+"/"+month+"/"+year);
+
+        // digital clock using javascript
+        function getTime()
+        {
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+
+            
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Events</title>
+</head>
+<body>
+    <script>
+        // The change in the state of an object is known as an Event.
+        /*For example, when a user clicks over the browser, add js code,4
+        which will execute the task to be performed on the event.*/  
+        //mouse events
+        //onclick(event handeler)-when mouse clicks on element
+        function clickevent()
+        {
+            document.write("this is a example of click event");
+        }
+
+        //mouse over events
+        //onmouseover(event handeler)-when the courser of the mouse is over the element
+        
+        function mouseover()
+        {
+            alert("this is an example of onmouseover event in js");
+        }
+
+        // onmouseout(event handeler)-When the cursor of the mouse leaves an element
+        // onmousedown(event handeler)	When the mouse button is pressed over the element
+        // onmouseup(event handeler) When the mouse button is released over the element
+        // onmousemove(event handeler)	When the mouse movement takes place.
+    </script>
+
+    <button onclick="clickevent()" value="onclick_event">on click</button>
+
+    <button onmouseover="mouseover()" value="mouseover">mouseover</button>
+</body>
+</html>

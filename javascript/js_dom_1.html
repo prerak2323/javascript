@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        /* methods of document object (document is object of window)
+        1> document.write("")
+        2> getElementById*/
+
+        /*Here, document is the root element that represents the html document.
+
+form1 is the name of the form.
+
+name is the attribute name of the input text.
+
+value is the property, that returns the value of the input text.
+*/
+
+function printform()
+{
+    var name=document.rform.fname.value;
+    alert("welcome "+name);
+}
+
+// document.getElementById();
+/* The document.getElementById() method returns the reference to element of specified id */
+function cube(){
+    var no=document.getElementById("no").value;
+    var cube=no*no*no;
+    alert(cube);
+}
+
+
+//document.getElementsByName();
+//This method returns a NodeList object, which is similar to an array, containing all the elements that match the given name.
+function totalelements()  
+{  
+var allgenders=document.getElementsByName("gender");  
+alert(allgenders[0].value);  
+}  
+
+//GetElementsByClassName()
+/*. This DOM method returns an array-like object that consists of all the elements having 
+the specified classname. On calling the getElementsByClassName() method on any particular 
+element, it will search the whole document and will return only those elements which match 
+the specified or given class name.*/
+var x=document.getElementsByClassName('class');
+
+document.write("on calling x, it will return an array-like object : <br>"+x);
+
+// document.getElementsByTagName();
+/*The document.getElementsByTagName() method returns all the element of specified tag name.*/
+function countpara()
+{
+    var totalpara=document.getElementsByTagName('p')
+    alert("total paragraphs are "+totalpara.length);
+}
+
+//innerHTML property 
+/*The innerHTML property can be used to write the dynamic html on the html document.*/
+function showcommentform()
+{
+    var data="Name: <input type='text' name='name'> <br> Comment:  <textarea></textarea> <br> <input type='submit' value='post'>"
+    document.getElementById('mylocation').innerHTML=data;
+}
+
+//innerText The innerText property can be used to write the dynamic text on the html document. Here, text will not be interpreted as html text but a normal text.
+/*In JavaScript, the onkeyup event is triggered when a user releases a key on the keyboard while focused on an input field or a 
+specific element*/
+function validate()
+{
+    var msg;
+    if(document.pass_str.userpass.value.length>5)
+    {
+        msg="good";
+    }
+    else
+    {
+        msg="poor";
+    }
+    document.getElementById("strength").innerText=msg;
+
+}
+
+
+    </script>   
+    <form name="rform">
+        Enter Name: <input  type="text" name="fname">
+        <input type="submit" onclick="printform()">
+    </form>
+
+    <form>
+        Enter No to Find Cube: <input type="number" id="no">
+        <input type="submit" onclick="cube()">
+    </form>
+
+    <form>
+    Male:<input type="radio" name="gender" value="male">
+    Female:<input type="radio" name="gender" value="female">
+    <input type="submit" onclick="totalelements()">
+    </form>
+<div class="class">
+    This is a simple class implementation
+</div>
+
+<p>This is a Paragraph</p>
+<p>this is a paragraph</p>
+<button onclick="countpara()">count paragraph</button>
+
+<form name="myform">
+<input type="button" value="comment" onclick="showcommentform()">
+<div id="mylocation"></div>
+</form>
+
+<form name="pass_str">
+    <input type="password" value="" name="userpass" onkeyup="validate()">
+    strength:<span id="strength">No strength</span>
+</form>
+
+</body>
+</html>

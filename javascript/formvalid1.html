@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <script>
+        function validateform()
+        {
+            // var state=false;
+            var name=document.regform.fname.value;
+            var email=document.regform.email.value;
+            var number=document.regform.phone.value;
+            var password=document.regform.password.value;
+
+            if(name.trim()==='')
+            {
+                document.getElement.ById('nameerror').innerHTML="Enter Name(Cannot Be Empty)";
+                return false;
+            }
+            else if(!validemail(email))
+            {
+                document.getElementById('emailerror').innerHTML="enter valid email";
+                return false;
+            }
+            else if(!validpassword(password))
+            {
+                document.getElementById('passerror').innerHTML="Password must contain 1 capital letter and 1 special character";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    
+        function validemail(email)
+        {
+            var emailparts=email.split('@');
+            if(emailparts.length<1)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        function validpassword(password)
+        {
+            if(password.length<9 && special(password) && password[0]===password[0].toUpperCase())
+           { 
+            return false;
+           }
+           return true;
+        }
+        function special(password)
+        {
+            var spl=['!','@','#','$','%'];
+            if(password.includes(spl))
+            {
+                return true;
+            }
+            return false;
+        }
+
+    </script>
+
+    <form action="" name="regform" onsubmit="return validateform()" method="post">
+        Name: <input type="text" name="fname"><span id="nameerror"></span><br>
+        Email: <input type="text" name="email"><span id="emailerror"></span><br><br>
+        Phone: <input type="number" name="phone"><span id="phoneerror"></span><br><br>
+        Password: <input type="password" name="password"><span id="passerror"></span><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

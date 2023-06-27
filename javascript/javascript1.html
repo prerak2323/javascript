@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // javascript is used to create clint-side dynamic pages
+/* 1>weakly typed 
+2> case sensitive
+3>clint side validation
+4>dynamic drop down menus
+5>display pop up windows and dialog boxes
+6>display clocks etc...
+*/
+        alert("hello javascript");
+        document.write("javascript first lc");
+        //alert dialog box in javascript
+        function msg()
+        {
+            alert("hello from function msg");
+        }
+
+        /* javascript variables
+        1>local variable
+        2>global variable
+        3>rules for declaration of variables
+        Name must start with a letter (a to z or A to Z), underscore( _ ), or dollar( $ ) sign.
+        After first letter we can use digits (0 to 9), for example value1.
+        JavaScript variables are case sensitive, for example x and X are different variables.
+        */
+       var x=10;
+       var y=20;
+       var z=x+y;
+       var value_="sooo";
+        document.write(z);
+        // variables declered outside of function are global variables
+        // variable decleared inside of function are local variables.
+        //declearing global variable inside the function
+        // window object
+        function m()
+        {
+            window.v=100;
+        }
+        function n()
+        {
+            alert(window.v);
+        }
+        m();
+        n();
+
+        // window object and .nomal variable name
+        
+    </script>
+    <form>
+    
+        <input type="button" onclick="msg()"> 
+    </form>
+</body>
+</html>
